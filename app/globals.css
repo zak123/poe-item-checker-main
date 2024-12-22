@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0f17;
+  --foreground: #ffffff;
+  --card: #0f172a;
+  --card-foreground: #ffffff;
+  --border: #1e293b;
+  --ring: #1e40af;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Textarea Styles */
+textarea {
+  caret-color: var(--foreground);
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  font-family: var(--font-geist-mono);
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 20px 2px var(--ring);
+}
+
+/* Item Text Formatting */
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(56, 189, 248, 0.2);
+}
